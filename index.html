@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <script src="/scripts/app.js" defer></script>
+    <script src="/scripts/config.js"></script>
+    <script src="/scripts/game.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Play Tic, Tac, Toe</h1>
+      <p>Built with HTML, CSS, JavaScript and - of course - lots of love !</p>
+    </header>
+
+    <main>
+      <section id="players">
+        <section class="player" id="player-x">
+          <p>Player 1</p>
+          <h2 class="player-name">Player Name</h2>
+          <h1>X</h1>
+          <p><span>Edit</span></p>
+        </section>
+
+        <section class="player" id="player-o">
+          <p>Player 2</p>
+          <h2 class="player-name">Player Name</h2>
+          <h1>O</h1>
+          <p><span>Edit</span></p>
+        </section>
+      </section>
+
+      <section id="player-login">
+        <form action="">
+          <h1>Choose your name</h1>
+          <div class="input-area">
+            <label for="your-name">Player name</label>
+            <input type="text" placeholder="Enter your name here" />
+          </div>
+
+          <div id="form-buttons">
+            <button class="form-button" id="cancel-button" >
+              Cancel
+            </button>
+            <button class="form-button" id="confirm-button" >
+              Confirm
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <button id="start-button">Start New Game</button>
+
+      <section id="result-bunner">
+        <h1>Game result</h1>
+        <p>Click "Start New Game" above, to start a new game</p>
+      </section>
+
+      <div id="game-and-turn-counter">
+        <p>
+          It`s your turn
+          <span id="player-turn"><strong>Player Name</strong> </span>
+        </p>
+
+        <section id="game">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
