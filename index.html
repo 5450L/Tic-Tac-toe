@@ -12,9 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
-    <script src="/scripts/app.js" defer></script>
-    <script src="/scripts/config.js"></script>
-    <script src="/scripts/game.js"></script>
   </head>
   <body>
     <header>
@@ -26,20 +23,21 @@
       <section id="players">
         <section class="player" id="player-x">
           <p>Player 1</p>
-          <h2 class="player-name">Player Name</h2>
+          <h2 class="player-name">Player Name X</h2>
           <h1>X</h1>
           <p><span>Edit</span></p>
         </section>
 
         <section class="player" id="player-o">
           <p>Player 2</p>
-          <h2 class="player-name">Player Name</h2>
+          <h2 class="player-name">Player Name O</h2>
           <h1>O</h1>
           <p><span>Edit</span></p>
         </section>
       </section>
 
       <section id="player-login">
+        <div id="back-drop"></div>
         <form action="">
           <h1>Choose your name</h1>
           <div class="input-area">
@@ -48,10 +46,10 @@
           </div>
 
           <div id="form-buttons">
-            <button class="form-button" id="cancel-button" >
+            <button class="form-button" id="cancel-button" type="reset">
               Cancel
             </button>
-            <button class="form-button" id="confirm-button" >
+            <button class="form-button" id="confirm-button" type="submit">
               Confirm
             </button>
           </div>
@@ -61,7 +59,7 @@
       <button id="start-button">Start New Game</button>
 
       <section id="result-bunner">
-        <h1>Game result</h1>
+        <h1 id="winner">Game result</h1>
         <p>Click "Start New Game" above, to start a new game</p>
       </section>
 
@@ -72,19 +70,24 @@
         </p>
 
         <section id="game">
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
+          <div class="cell"><p class="cell-content">0</p></div>
+          <div class="cell"><p class="cell-content">1</p></div>
+          <div class="cell"><p class="cell-content">2</p></div>
 
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
+          <div class="cell"><p class="cell-content">3</p></div>
+          <div class="cell"><p class="cell-content">4</p></div>
+          <div class="cell"><p class="cell-content">5</p></div>
 
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
+          <div class="cell"><p class="cell-content">6</p></div>
+          <div class="cell"><p class="cell-content">7</p></div>
+          <div class="cell"><p class="cell-content">8</p></div>
+
+          <div id="game-is-done"></div>
         </section>
       </div>
     </main>
+    <script src="/scripts/config.js" defer></script>
+    <script src="/scripts/game.js" defer></script>
+    <script src="/scripts/app.js" defer></script>
   </body>
 </html>

@@ -23,26 +23,26 @@ header {
 /* ----------------------------Main Part------------------------------------------------------- */
 
 main {
-  width: 70%;
+  width: 60%;
 
   margin: auto;
 }
 
 /* -----------------------------------------------Player cards--------------------------------- */
 #players {
-  margin-top: 3rem;
-
+  margin: 3rem auto 0 auto;
+  width: 80%;
   display: flex;
   flex-direction: row;
 
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .player {
   margin: 0 0.75rem;
   padding: 0.5rem;
 
-  width: 80%;
+  width: 40%;
   height: 10rem;
 
   border-radius: 6px;
@@ -95,10 +95,20 @@ main {
 
 #player-login form {
   margin: 6rem auto;
-  width: 60%;
+  width: 40%;
   padding: 0.5rem;
   border-radius: 4px;
   background-color: rgb(246, 240, 252);
+  z-index: 2;
+  position: relative;
+}
+#back-drop {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 #player-login form h1 {
@@ -115,11 +125,11 @@ main {
 }
 
 .input-area input {
-  width: 40%;
+  width: 50%;
   margin: 0.5rem auto;
-  padding: 0.4rem 0.5rem;
+  padding: 0.5rem 0.75rem;
 
-  border: 1px solid rgba(204, 193, 204, 0.4);
+  border: 0.08rem solid rgba(204, 193, 204, 0.4);
 }
 
 #form-buttons {
@@ -136,7 +146,7 @@ main {
   padding: 0.4rem 1.25rem;
   border-radius: 3px;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 0.25rem solid transparent;
   width: 100%;
 }
 
@@ -195,6 +205,13 @@ main {
 #game-and-turn-counter {
   display: none;
 }
+
+#player-turn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(135, 17, 245);
+}
+
 #game {
   width: 40%;
   margin: 1rem auto;
@@ -202,8 +219,16 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
-
+#game-is-done {
+  margin-left: -6.2rem;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
 .cell {
   width: 8rem;
   height: 8rem;
@@ -215,6 +240,21 @@ main {
   cursor: pointer;
   background-color: rgb(135, 17, 245);
 }
+
+.cell-content {
+  display: none;
+
+  margin: 22.5% auto;
+  font-size: 4rem;
+  font-weight: bold;
+
+  color: white;
+}
 /* -----------------------------------------------Game related part over--------------------------------- */
 
 /* ---------------------------------------Main Part over-------------------------------------- */
+
+.clicked-cell {
+  cursor: auto;
+  background-color: rgb(135, 17, 245);
+}

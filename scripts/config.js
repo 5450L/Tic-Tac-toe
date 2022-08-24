@@ -7,6 +7,9 @@ function showLoginSectionO() {
     playerLoginSection.style.display = "block";
     isPlayerX = false;
 }
+function cancelLogin() {
+    playerLoginSection.style.display = "none";
+}
 function confirmLogin(event) {
     event.preventDefault();
     let enteredName = playerNameInput.value.toLowerCase();
@@ -20,3 +23,26 @@ function confirmLogin(event) {
     playerLoginSection.style.display = "none";
     playerNameInput.value = "";
 }
+
+function startGame(event) {
+    event.preventDefault();
+
+    gameBlocker.style.zIndex = -1;
+    gameIsDone = false;
+    gameArray = [
+        0, 0, 0,
+        0, 0, 0,
+        0, 0, 0
+    ]
+    resultBunner.style.display = "none";
+    for (let i = 0; i < gameCells.length; i++) {
+        gameCells[i].classList.remove("clicked-cell");
+        gameCellsContent[i].style.display = "none";
+        gameCellsContent[i].textContent = i;
+    }
+    gameArea.style.display = "block";
+    turnPlayerSpan.textContent = playerXName.textContent;
+
+    isTurnX = true;
+}
+
