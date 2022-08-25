@@ -73,9 +73,7 @@ function cellClick(event) {
         }
     }
 
-    if (gameIsDone === true) {
-        gameBlocker.style.zIndex = 1;
-    }
+   
 
     if (isTurnX == true) {
         gameArray[event.target.children[0].textContent] = 1;
@@ -93,7 +91,9 @@ function cellClick(event) {
 
     event.target.classList.add("clicked-cell");
     event.target.children[0].style.display = "block";
-
+    if (gameIsDone === true) {
+        gameBlocker.style.zIndex = 1;
+    }
     isTurnX = !isTurnX;
 
 }

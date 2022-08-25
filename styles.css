@@ -223,10 +223,11 @@ main {
   z-index: 2;
 }
 #game-is-done {
-  margin-left: -6.2rem;
-  width: 200%;
+  margin-left: -10rem;
+  width: 100rem;
   height: 100%;
   position: absolute;
+  left: 0;
   z-index: -1;
 }
 .cell {

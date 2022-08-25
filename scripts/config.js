@@ -1,4 +1,6 @@
 function showLoginSectionX() {
+    gameArea.style.display = "none";
+    resultBunner.style.display = "none";
     playerLoginSection.style.display = "block";
     isPlayerX = true;
 }
