@@ -73,7 +73,9 @@ function cellClick(event) {
         }
     }
 
-   
+    if(gameArray[event.target.children[0].textContent] > 0){
+        return;
+    }
 
     if (isTurnX == true) {
         gameArray[event.target.children[0].textContent] = 1;
